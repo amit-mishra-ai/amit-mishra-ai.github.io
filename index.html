@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <title>Amit Kumar Mishra • Data Analyst Portfolio</title>
@@ -31,17 +31,18 @@
         --transition-fast: 0.18s ease-out;
       }
 
+      /* Keep light mode readable: still a dark UI but with bright text */
       [data-theme="light"] {
-        --bg: #f4f4f5;
-        --bg-alt: #e5e7eb;
-        --bg-elevated: #ffffff;
-        --accent: #2563eb;
-        --accent-soft: rgba(37, 99, 235, 0.08);
-        --accent-strong: #ea580c;
-        --text: #020617;
-        --text-muted: #4b5563;
-        --border-subtle: rgba(148, 163, 184, 0.5);
-        --shadow-soft: 0 16px 32px rgba(15, 23, 42, 0.18);
+        --bg: #050816;
+        --bg-alt: #0b1020;
+        --bg-elevated: #11172a;
+        --accent: #38bdf8;
+        --accent-soft: rgba(56, 189, 248, 0.15);
+        --accent-strong: #f97316;
+        --text: #f9fafb;
+        --text-muted: #9ca3af;
+        --border-subtle: rgba(148, 163, 184, 0.4);
+        --shadow-soft: 0 20px 40px rgba(15, 23, 42, 0.55);
       }
 
       * {
@@ -1063,7 +1064,7 @@
       <div class="nav">
         <div class="nav-left">
           <div class="avatar">
-            <!-- <img src="images/profile.jpg" alt="Amit Kumar Mishra" /> -->
+            <img src="images/analyst-monitoring-data-screen.jpg" alt="Amit Kumar Mishra" />
           </div>
           <div class="nav-title">
             <span class="nav-title-main">Amit Kumar Mishra</span>
@@ -1080,13 +1081,13 @@
           <a href="#resume">Resume</a>
           <a href="#contact">Contact</a>
         </nav>
-        
+
         <div class="nav-right">
           <div class="pill">Final-year BCA • Open to roles</div>
-          <button id="themeToggle" class="theme-toggle" type="button">
+          <!-- <button id="themeToggle" class="theme-toggle" type="button">
             <span aria-hidden="true">🌙</span>
             <span class="theme-label">Dark</span>
-          </button>
+          </button> -->
         </div>
       </div>
     </header>
@@ -1548,7 +1549,7 @@
         </div>
       </section>
 
-           <!-- SQL Projects (separate section, no dashboards) -->
+      <!-- SQL Projects (separate section, no dashboards) -->
       <section id="sql-projects" class="reveal">
         <div class="section-header">
           <div>
@@ -1562,7 +1563,6 @@
         </div>
 
         <div class="projects-grid">
-
           <!-- CRM Sales Opportunities Insights (SQL) -->
           <article class="project-card" data-category="sql">
             <div class="project-top-row">
@@ -1598,9 +1598,7 @@
           <!-- Zepto Sales Insights using SQL -->
           <article class="project-card" data-category="sql">
             <div class="project-top-row">
-              <h3 class="project-name">
-                Zepto Sales Insights using SQL
-              </h3>
+              <h3 class="project-name">Zepto Sales Insights using SQL</h3>
               <span class="project-type">SQL &amp; Analytics</span>
             </div>
             <p class="project-description">
@@ -1632,9 +1630,7 @@
           <!-- SQL Data Analysis Project -->
           <article class="project-card" data-category="sql">
             <div class="project-top-row">
-              <h3 class="project-name">
-                SQL Data Analysis Project
-              </h3>
+              <h3 class="project-name">SQL Data Analysis Project</h3>
               <span class="project-type">SQL &amp; Business Insights</span>
             </div>
             <p class="project-description">
@@ -1662,11 +1658,8 @@
               </a>
             </div>
           </article>
-
         </div>
       </section>
-
-
 
       <!-- Certificates -->
       <section id="certs" class="reveal">
@@ -1953,7 +1946,9 @@
           yearSpan.textContent = new Date().getFullYear();
         }
 
-        const THEME_KEY = "portfolio-theme";
+        // use a NEW key so old saved "light" value is ignored
+        const THEME_KEY = "portfolio-theme-v2";
+
         function applyTheme(theme) {
           root.setAttribute("data-theme", theme);
           if (themeLabel && themeToggle) {
@@ -1967,12 +1962,10 @@
           }
         }
 
+        // 👇 Always start from HTML (data-theme="dark") unless user already chose a theme with the NEW key
         const storedTheme = window.localStorage.getItem(THEME_KEY);
         const initialTheme =
-          storedTheme ||
-          (window.matchMedia("(prefers-color-scheme: light)").matches
-            ? "light"
-            : "dark");
+          storedTheme || root.getAttribute("data-theme") || "dark";
         applyTheme(initialTheme);
 
         if (themeToggle) {
