@@ -32,6 +32,81 @@
         --transition-fast: 0.18s ease-out;
       }
 
+      /* --- Mobile certificate visibility & safety fixes --- */
+@media (max-width: 900px) {
+  /* make cert grid 1-column and visible */
+  .certs-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.8rem;
+    padding-inline: 0.6rem;
+    z-index: 2;
+  }
+
+  .cert-card {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    padding: 0.8rem !important;
+    margin: 0 !important;
+    border-radius: 12px;
+    overflow: visible !important; /* avoid clipping portrait images */
+    box-shadow: 0 12px 28px rgba(2,6,23,0.45);
+  }
+
+  /* ensure badge stays inside card */
+  .cert-badge {
+    right: 0.6rem;
+    top: 0.6rem;
+  }
+
+  /* tighten cert-image container for mobile */
+  .cert-image {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(2,6,23,0.03);
+    border: 1px solid rgba(148,163,184,0.12);
+  }
+
+  /* constrain image sizes and preserve aspect */
+  .cert-image img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: 420px !important;       /* prevents massive vertical images on phones */
+    object-fit: contain !important;
+    background: transparent !important;
+  }
+
+  /* special handling for tall/portrait certs */
+  .cert-image img.tall-cert {
+    max-height: 360px !important;
+  }
+
+  /* safety: override any accidental hiding rules */
+  .cert-card, .cert-image, .cert-image img {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* if a sticky header is overlapping content on mobile, add small top padding */
+  main.shell {
+    padding-top: 0.6rem;
+  }
+}
+
+/* --- Force reveal elements visible on small screens (in case IntersectionObserver doesn't trigger) --- */
+@media (max-width: 900px) {
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+
       /* Keep light mode readable: still a dark UI but with bright text */
       [data-theme="light"] {
         --bg: #050816;
