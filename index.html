@@ -33,79 +33,80 @@
       }
 
       /* --- Mobile certificate visibility & safety fixes --- */
-@media (max-width: 900px) {
-  /* make cert grid 1-column and visible */
-  .certs-grid {
-    grid-template-columns: 1fr !important;
-    gap: 0.8rem;
-    padding-inline: 0.6rem;
-    z-index: 2;
-  }
+      @media (max-width: 900px) {
+        /* make cert grid 1-column and visible */
+        .certs-grid {
+          grid-template-columns: 1fr !important;
+          gap: 0.8rem;
+          padding-inline: 0.6rem;
+          z-index: 2;
+        }
 
-  .cert-card {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    transform: none !important;
-    padding: 0.8rem !important;
-    margin: 0 !important;
-    border-radius: 12px;
-    overflow: visible !important; /* avoid clipping portrait images */
-    box-shadow: 0 12px 28px rgba(2,6,23,0.45);
-  }
+        .cert-card {
+          display: block !important;
+          visibility: visible !important;
+          opacity: 1 !important;
+          transform: none !important;
+          padding: 0.8rem !important;
+          margin: 0 !important;
+          border-radius: 12px;
+          overflow: visible !important; /* avoid clipping portrait images */
+          box-shadow: 0 12px 28px rgba(2, 6, 23, 0.45);
+        }
 
-  /* ensure badge stays inside card */
-  .cert-badge {
-    right: 0.6rem;
-    top: 0.6rem;
-  }
+        /* ensure badge stays inside card */
+        .cert-badge {
+          right: 0.6rem;
+          top: 0.6rem;
+        }
 
-  /* tighten cert-image container for mobile */
-  .cert-image {
-    width: 100%;
-    display: block;
-    border-radius: 10px;
-    overflow: hidden;
-    background: rgba(2,6,23,0.03);
-    border: 1px solid rgba(148,163,184,0.12);
-  }
+        /* tighten cert-image container for mobile */
+        .cert-image {
+          width: 100%;
+          display: block;
+          border-radius: 10px;
+          overflow: hidden;
+          background: rgba(2, 6, 23, 0.03);
+          border: 1px solid rgba(148, 163, 184, 0.12);
+        }
 
-  /* constrain image sizes and preserve aspect */
-  .cert-image img {
-    display: block !important;
-    width: 100% !important;
-    height: auto !important;
-    max-height: 420px !important;       /* prevents massive vertical images on phones */
-    object-fit: contain !important;
-    background: transparent !important;
-  }
+        /* constrain image sizes and preserve aspect */
+        .cert-image img {
+          display: block !important;
+          width: 100% !important;
+          height: auto !important;
+          max-height: 420px !important; /* prevents massive vertical images on phones */
+          object-fit: contain !important;
+          background: transparent !important;
+        }
 
-  /* special handling for tall/portrait certs */
-  .cert-image img.tall-cert {
-    max-height: 360px !important;
-  }
+        /* special handling for tall/portrait certs */
+        .cert-image img.tall-cert {
+          max-height: 360px !important;
+        }
 
-  /* safety: override any accidental hiding rules */
-  .cert-card, .cert-image, .cert-image img {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-  }
+        /* safety: override any accidental hiding rules */
+        .cert-card,
+        .cert-image,
+        .cert-image img {
+          display: block !important;
+          visibility: visible !important;
+          opacity: 1 !important;
+        }
 
-  /* if a sticky header is overlapping content on mobile, add small top padding */
-  main.shell {
-    padding-top: 0.6rem;
-  }
-}
+        /* if a sticky header is overlapping content on mobile, add small top padding */
+        main.shell {
+          padding-top: 0.6rem;
+        }
+      }
 
-/* --- Force reveal elements visible on small screens (in case IntersectionObserver doesn't trigger) --- */
-@media (max-width: 900px) {
-  .reveal {
-    opacity: 1 !important;
-    transform: none !important;
-  }
-}
-
+      /* --- Force reveal elements visible on small screens (in case IntersectionObserver doesn't trigger) --- */
+      @media (max-width: 900px) {
+        .reveal {
+          opacity: 1 !important;
+          transform: none !important;
+        }
+      }
 
       /* Keep light mode readable: still a dark UI but with bright text */
       [data-theme="light"] {
@@ -1329,10 +1330,10 @@
               recommendations.
             </p>
             <p class="about-text">
-              Recently, I worked as a Sales Executive at Thomas Cook India
-              Limited, where I used Excel and Power BI to analyse sales data and
-              help shape strategies that contributed to a significant increase
-              in sales.
+              Recently, I worked as a Data Intern at Thomas Cook India Limited,
+              where I used Excel, SQL and Power BI to analyse sales data and
+              help shape strategies that contributed to a 30% significant
+              increase in sales.
             </p>
 
             <div class="about-highlight">
@@ -1364,11 +1365,11 @@
             <div class="timeline-item">
               <div class="timeline-dot"></div>
               <div>
-                <div class="timeline-role">Sales Executive</div>
+                <div class="timeline-role">Data Intern</div>
                 <div class="timeline-org">Thomas Cook India Limited</div>
                 <div class="timeline-meta">
-                  Aug 2025 – Oct 2025 • Used Excel &amp; Power BI to analyse
-                  sales data and support strategies that boosted sales
+                  Aug 2025 – Oct 2025 • Used Excel, SQL &amp;Power BI to analyse
+                  sales data and support strategies that boosted 30% sales
                   performance.
                 </div>
               </div>
@@ -1609,48 +1610,50 @@
             </div>
           </article>
           <!-- Department Operations Analytics (Fabric + Power BI) -->
-<article class="project-card" data-category="bi end-to-end">
-  <div class="project-top-row">
-    <h3 class="project-name">Department Operations – End-to-End Analytics</h3>
-    <span class="project-type">Fabric • End-to-End • BI</span>
-  </div>
+          <article class="project-card" data-category="bi end-to-end">
+            <div class="project-top-row">
+              <h3 class="project-name">
+                Department Operations – End-to-End Analytics
+              </h3>
+              <span class="project-type">Fabric • End-to-End • BI</span>
+            </div>
 
-  <p class="project-description">
-    Built a complete analytics solution using Microsoft Fabric—starting from
-    raw Excel files to a fully automated Power BI report. The project includes
-    a Lakehouse, Dataflows, Data Pipelines, Warehouse SQL transformations, and
-    a semantic model powering insights on project budgets, capital allocation,
-    and department-wise financial performance.
-  </p>
+            <p class="project-description">
+              Built a complete analytics solution using Microsoft
+              Fabric—starting from raw Excel files to a fully automated Power BI
+              report. The project includes a Lakehouse, Dataflows, Data
+              Pipelines, Warehouse SQL transformations, and a semantic model
+              powering insights on project budgets, capital allocation, and
+              department-wise financial performance.
+            </p>
 
-  <div class="project-meta">
-    <span>Microsoft Fabric</span>
-    <span>Power BI</span>
-    <span>Dataflow Gen2</span>
-    <span>SQL Warehouse</span>
-    <span>DAX</span>
-  </div>
+            <div class="project-meta">
+              <span>Microsoft Fabric</span>
+              <span>Power BI</span>
+              <span>Dataflow Gen2</span>
+              <span>SQL Warehouse</span>
+              <span>DAX</span>
+            </div>
 
-  <div class="project-screenshot">
-    <img
-      src="images/fabric-department-operations-dashboard.png"
-      alt="Department Operations Power BI Dashboard"
-    />
-  </div>
+            <div class="project-screenshot">
+              <img
+                src="images/fabric-department-operations-dashboard.png"
+                alt="Department Operations Power BI Dashboard"
+              />
+            </div>
 
-  <div class="project-actions">
-    <a
-      class="project-link primary"
-      href="https://github.com/amit-mishra-ai/Department-Operations-Analytics-Dashboard"
-      target="_blank"
-      rel="noreferrer"
-    >
-      View GitHub Repo
-      <span>↗</span>
-    </a>
-  </div>
-</article>
-
+            <div class="project-actions">
+              <a
+                class="project-link primary"
+                href="https://github.com/amit-mishra-ai/Department-Operations-Analytics-Dashboard"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View GitHub Repo
+                <span>↗</span>
+              </a>
+            </div>
+          </article>
 
           <!-- Sales Analysis Dashboard -->
           <article class="project-card" data-category="bi end-to-end">
@@ -1806,242 +1809,280 @@
       </section>
 
       <!-- Certificates -->
-<section id="certs" class="reveal">
-  <div class="section-header">
-    <div>
-      <div class="section-label">Certificates</div>
-      <h2 class="section-title">Certifications &amp; virtual programs</h2>
-    </div>
-    <p class="section-subtitle">
-      Structured learning that supports my self-driven practice.
-    </p>
-  </div>
+      <section id="certs" class="reveal">
+        <div class="section-header">
+          <div>
+            <div class="section-label">Certificates</div>
+            <h2 class="section-title">Certifications &amp; virtual programs</h2>
+          </div>
+          <p class="section-subtitle">
+            Structured learning that supports my self-driven practice.
+          </p>
+        </div>
 
-  <div class="certs-grid">
+        <div class="certs-grid">
+          <!-- DP-600 Microsoft Fabric Certification -->
+          <article class="cert-card">
+            <div class="cert-badge">Microsoft</div>
 
-    <!-- DP-600 Microsoft Fabric Certification -->
-<article class="cert-card">
-  <div class="cert-badge">Microsoft</div>
+            <h3 class="cert-name">
+              Microsoft Certified: Fabric Analytics Engineer Associate (DP-600)
+            </h3>
 
-  <h3 class="cert-name">
-    Microsoft Certified: Fabric Analytics Engineer Associate (DP-600)
-  </h3>
+            <p class="cert-issuer">Microsoft • Dec 2025</p>
 
-  <p class="cert-issuer">Microsoft • Dec 2025</p>
+            <p class="cert-meta">
+              Earned the DP-600 certification validating hands-on expertise in
+              Microsoft Fabric, including Lakehouse architecture, Dataflows
+              Gen2, Warehouses, Semantic Models, DAX, SQL analytics, and
+              end-to-end Power BI reporting with automated data pipelines.
+            </p>
 
-  <p class="cert-meta">
-    Earned the DP-600 certification validating hands-on expertise in Microsoft
-    Fabric, including Lakehouse architecture, Dataflows Gen2, Warehouses,
-    Semantic Models, DAX, SQL analytics, and end-to-end Power BI reporting with
-    automated data pipelines.
-  </p>
+            <div class="cert-image">
+              <img
+                src="images/dp-600-preview.png"
+                alt="Microsoft DP-600 Fabric Analytics Engineer Associate Certificate"
+              />
+            </div>
 
-  <div class="cert-image">
-    <img
-      src="images/dp-600-preview.png"
-      alt="Microsoft DP-600 Fabric Analytics Engineer Associate Certificate"
-    />
-  </div>
+            <div class="project-actions" style="margin-top: 0.6rem">
+              <a
+                class="project-link primary"
+                href="https://learn.microsoft.com/api/credentials/share/en-us/AmitMishra-7923/BA0BED1A536446C6?sharingId=89C5D92628E942D0"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View Certificate
+                <span>↗</span>
+              </a>
+            </div>
+          </article>
 
-  <div class="project-actions" style="margin-top: 0.6rem;">
-    <a
-      class="project-link primary"
-      href="https://learn.microsoft.com/api/credentials/share/en-us/AmitMishra-7923/BA0BED1A536446C6?sharingId=89C5D92628E942D0"
-      target="_blank"
-      rel="noreferrer"
-    >
-      View Certificate 
-      <span>↗</span>
-    </a>
-  </div>
-</article>
+          <!-- Snowflake 1 -->
+          <article class="cert-card">
+            <div class="cert-badge">Snowflake</div>
+            <h3 class="cert-name">Snowflake Hands-On Essentials</h3>
+            <p class="cert-issuer">Snowflake • Badge 1</p>
+            <p class="cert-meta">
+              Essentials workshop focused on getting started with Snowflake,
+              data loading, querying, and core concepts for cloud data
+              warehousing.
+            </p>
+            <div class="cert-image">
+              <img
+                src="images/snowflake-essentials.png"
+                alt="Snowflake Hands-On Essentials certificate"
+              />
+            </div>
+          </article>
 
-    <!-- Snowflake 1 -->
-    <article class="cert-card">
-      <div class="cert-badge">Snowflake</div>
-      <h3 class="cert-name">Snowflake Hands-On Essentials</h3>
-      <p class="cert-issuer">Snowflake • Badge 1</p>
-      <p class="cert-meta">
-        Essentials workshop focused on getting started with Snowflake, data loading,
-        querying, and core concepts for cloud data warehousing.
-      </p>
-      <div class="cert-image">
-        <img src="images/snowflake-essentials.png" alt="Snowflake Hands-On Essentials certificate" />
-      </div>
-    </article>
+          <!-- Snowflake 2 -->
+          <article class="cert-card">
+            <div class="cert-badge">Snowflake</div>
+            <h3 class="cert-name">
+              Collaboration, Marketplace &amp; Cost Estimation
+            </h3>
+            <p class="cert-issuer">Snowflake • Badge 2</p>
+            <p class="cert-meta">
+              Workshop covering collaboration, data marketplace, performance
+              considerations, and cost estimation for real Snowflake workloads.
+            </p>
+            <div class="cert-image">
+              <img
+                src="images/snowflake-collaboration.png"
+                alt="Snowflake Collaboration and Cost Estimation certificate"
+              />
+            </div>
+          </article>
 
-    <!-- Snowflake 2 -->
-    <article class="cert-card">
-      <div class="cert-badge">Snowflake</div>
-      <h3 class="cert-name">Collaboration, Marketplace &amp; Cost Estimation</h3>
-      <p class="cert-issuer">Snowflake • Badge 2</p>
-      <p class="cert-meta">
-        Workshop covering collaboration, data marketplace, performance considerations,
-        and cost estimation for real Snowflake workloads.
-      </p>
-      <div class="cert-image">
-        <img src="images/snowflake-collaboration.png" alt="Snowflake Collaboration and Cost Estimation certificate" />
-      </div>
-    </article>
+          <!-- HP LIFE -->
+          <article class="cert-card">
+            <div class="cert-badge">Analytics</div>
+            <h3 class="cert-name">HP LIFE – Data Science &amp; Analytics</h3>
+            <p class="cert-issuer">HP Foundation • Aug 2025</p>
+            <p class="cert-meta">
+              Covered fundamentals of data science and analytics, focusing on
+              real-world business applications.
+            </p>
+            <div class="cert-image">
+              <img
+                src="images/cert-hp-life.png"
+                alt="HP LIFE Data Science & Analytics certificate"
+              />
+            </div>
+          </article>
 
-    <!-- HP LIFE -->
-    <article class="cert-card">
-      <div class="cert-badge">Analytics</div>
-      <h3 class="cert-name">HP LIFE – Data Science &amp; Analytics</h3>
-      <p class="cert-issuer">HP Foundation • Aug 2025</p>
-      <p class="cert-meta">
-        Covered fundamentals of data science and analytics, focusing on real-world business applications.
-      </p>
-      <div class="cert-image">
-        <img src="images/cert-hp-life.png" alt="HP LIFE Data Science & Analytics certificate" />
-      </div>
-    </article>
+          <!-- Deloitte -->
+          <article class="cert-card">
+            <div class="cert-badge">Industry</div>
+            <h3 class="cert-name">Deloitte Data Analytics Job Simulation</h3>
+            <p class="cert-issuer">Virtual Experience • Aug 2025</p>
+            <p class="cert-meta">
+              Practised solving client-style analytics tasks, focusing on
+              storytelling with data and stakeholder-ready outputs.
+            </p>
+            <div class="cert-image">
+              <img
+                src="images/cert-deloitte.png"
+                alt="Deloitte Data Analytics Job Simulation certificate"
+              />
+            </div>
+          </article>
 
-    <!-- Deloitte -->
-    <article class="cert-card">
-      <div class="cert-badge">Industry</div>
-      <h3 class="cert-name">Deloitte Data Analytics Job Simulation</h3>
-      <p class="cert-issuer">Virtual Experience • Aug 2025</p>
-      <p class="cert-meta">
-        Practised solving client-style analytics tasks, focusing on storytelling with data and stakeholder-ready outputs.
-      </p>
-      <div class="cert-image">
-        <img src="images/cert-deloitte.png" alt="Deloitte Data Analytics Job Simulation certificate" />
-      </div>
-    </article>
+          <!-- Tata -->
+          <article class="cert-card">
+            <div class="cert-badge">Visualization</div>
+            <h3 class="cert-name">Tata Data Visualization Program</h3>
+            <p class="cert-issuer">Forage • Aug 2025</p>
+            <p class="cert-meta">
+              Learned how to turn business problems into clear visual narratives
+              using charts and dashboards.
+            </p>
+            <div class="cert-image">
+              <img
+                src="images/cert-tata.png"
+                alt="Tata Data Visualization certificate"
+              />
+            </div>
+          </article>
 
-    <!-- Tata -->
-    <article class="cert-card">
-      <div class="cert-badge">Visualization</div>
-      <h3 class="cert-name">Tata Data Visualization Program</h3>
-      <p class="cert-issuer">Forage • Aug 2025</p>
-      <p class="cert-meta">
-        Learned how to turn business problems into clear visual narratives using charts and dashboards.
-      </p>
-      <div class="cert-image">
-        <img src="images/cert-tata.png" alt="Tata Data Visualization certificate" />
-      </div>
-    </article>
+          <!-- SQL Simplilearn (kept one canonical) -->
+          <article class="cert-card">
+            <div class="cert-badge">SQL</div>
+            <h3 class="cert-name">SQL for Data Analysis</h3>
+            <p class="cert-issuer">Simplilearn</p>
+            <p class="cert-meta">
+              Focused on analytical SQL for real business use cases including
+              joins, filtering, aggregation, window functions, and subqueries.
+            </p>
+            <div class="cert-image">
+              <img
+                src="images/cert-sql-simplilearn.png"
+                alt="SQL for Data Analysis certificate"
+              />
+            </div>
+          </article>
 
-    <!-- SQL Simplilearn (kept one canonical) -->
-    <article class="cert-card">
-      <div class="cert-badge">SQL</div>
-      <h3 class="cert-name">SQL for Data Analysis</h3>
-      <p class="cert-issuer">Simplilearn</p>
-      <p class="cert-meta">
-        Focused on analytical SQL for real business use cases including joins, filtering,
-        aggregation, window functions, and subqueries.
-      </p>
-      <div class="cert-image">
-        <img src="images/cert-sql-simplilearn.png" alt="SQL for Data Analysis certificate" />
-      </div>
-    </article>
+          <!-- Career Essentials (Microsoft + LinkedIn) -->
+          <article class="cert-card">
+            <div class="cert-badge">Foundations</div>
+            <h3 class="cert-name">Career Essentials in Data Analysis</h3>
+            <p class="cert-issuer">Microsoft &amp; LinkedIn Learning</p>
+            <p class="cert-meta">
+              Overview of the data analyst role, core tools, and the mindset
+              required to work with data in business environments.
+            </p>
+            <div class="cert-image">
+              <img
+                src="images/cert-career-essentials.png"
+                alt="Career Essentials in Data Analysis certificate"
+              />
+            </div>
+          </article>
 
-    <!-- Career Essentials (Microsoft + LinkedIn) -->
-    <article class="cert-card">
-      <div class="cert-badge">Foundations</div>
-      <h3 class="cert-name">Career Essentials in Data Analysis</h3>
-      <p class="cert-issuer">Microsoft &amp; LinkedIn Learning</p>
-      <p class="cert-meta">
-        Overview of the data analyst role, core tools, and the mindset required to work with data in business environments.
-      </p>
-      <div class="cert-image">
-        <img src="images/cert-career-essentials.png" alt="Career Essentials in Data Analysis certificate" />
-      </div>
-    </article>
+          <article class="cert-card">
+            <div class="cert-badge">Foundations</div>
+            <h3 class="cert-name">Career Essentials in Data Analysis</h3>
+            <p class="cert-issuer">Microsoft &amp; LinkedIn Learning</p>
+            <p class="cert-meta">
+              Completed the full professional learning path covering data
+              analysis fundamentals, visualization, analytics workflows, and
+              practical business-focused data skills with real-world scenarios.
+            </p>
+            <div class="cert-image">
+              <img
+                src="images/carrer-essential-data-analysis.png"
+                alt="Career Essentials in Data Analysis Certificate"
+              />
+            </div>
+          </article>
 
-    <article class="cert-card">
-  <div class="cert-badge">Foundations</div>
-  <h3 class="cert-name">Career Essentials in Data Analysis</h3>
-  <p class="cert-issuer">Microsoft &amp; LinkedIn Learning</p>
-  <p class="cert-meta">
-    Completed the full professional learning path covering data analysis
-    fundamentals, visualization, analytics workflows, and practical
-    business-focused data skills with real-world scenarios.
-  </p>
-  <div class="cert-image">
-    <img
-      src="images/carrer-essential-data-analysis.png"
-      alt="Career Essentials in Data Analysis Certificate"
-    />
-  </div>
-</article>
+          <!-- Power BI -->
+          <article class="cert-card">
+            <div class="cert-badge">Power BI</div>
+            <h3 class="cert-name">Power BI Certification</h3>
+            <p class="cert-issuer">SkillCourse</p>
+            <p class="cert-meta">
+              Demonstrates practical skills in building interactive dashboards,
+              data modelling, DAX, and sharing reports for stakeholders.
+            </p>
+            <div class="cert-image">
+              <img src="images/cert-powerbi.png" alt="Power BI certificate" />
+            </div>
+          </article>
 
+          <article class="cert-card">
+            <div class="cert-badge">SQL</div>
+            <h3 class="cert-name">30-Days SQL Micro Course</h3>
+            <p class="cert-issuer">SkillCourse • Instructor: Satish Dhawale</p>
+            <p class="cert-meta">
+              Completed a structured 30-day SQL program covering querying
+              fundamentals, joins, filtering, aggregations, subqueries, and
+              hands-on exercises designed for real-world analytics work.
+            </p>
+            <div class="cert-image">
+              <img
+                src="images/cert-sql.png"
+                alt="30-Days SQL Micro Course Certificate"
+              />
+            </div>
+          </article>
 
-    <!-- Power BI -->
-    <article class="cert-card">
-      <div class="cert-badge">Power BI</div>
-      <h3 class="cert-name">Power BI Certification</h3>
-      <p class="cert-issuer">SkillCourse</p>
-      <p class="cert-meta">
-        Demonstrates practical skills in building interactive dashboards, data modelling, DAX, and sharing reports for stakeholders.
-      </p>
-      <div class="cert-image">
-        <img src="images/cert-powerbi.png" alt="Power BI certificate" />
-      </div>
-    </article>
+          <!-- Excel Automation -->
+          <article class="cert-card">
+            <div class="cert-badge">Automation</div>
+            <h3 class="cert-name">Excel Automation using ChatGPT</h3>
+            <p class="cert-issuer">Simplilearn &amp; Microsoft</p>
+            <p class="cert-meta">
+              Focused on automating Excel workflows and reports using AI,
+              prompts, and integrations to speed up data analysis tasks.
+            </p>
+            <div class="cert-image">
+              <img
+                src="images/cert-excel-automation.png"
+                alt="Excel Automation using ChatGPT certificate"
+              />
+            </div>
+          </article>
 
-    <article class="cert-card">
-  <div class="cert-badge">SQL</div>
-  <h3 class="cert-name">30-Days SQL Micro Course</h3>
-  <p class="cert-issuer">SkillCourse • Instructor: Satish Dhawale</p>
-  <p class="cert-meta">
-    Completed a structured 30-day SQL program covering querying fundamentals,
-    joins, filtering, aggregations, subqueries, and hands-on exercises designed
-    for real-world analytics work.
-  </p>
-  <div class="cert-image">
-    <img
-      src="images/cert-sql.png"
-      alt="30-Days SQL Micro Course Certificate"
-    />
-  </div>
-</article>
+          <!-- Business Analytics with Excel -->
+          <article class="cert-card">
+            <div class="cert-badge">Excel</div>
+            <h3 class="cert-name">Business Analytics with Excel</h3>
+            <p class="cert-issuer">Microsoft &amp; Simplilearn</p>
+            <p class="cert-meta">
+              Covered analytical principles using Microsoft Excel including data
+              cleaning, pivot tables, KPI tracking, and scenario analysis.
+            </p>
+            <div class="cert-image">
+              <img
+                src="images/cert-excel.png"
+                alt="Business Analytics with Excel certificate"
+              />
+            </div>
+          </article>
 
+          <!-- IDC 21 days SQL challenge -->
+          <article class="cert-card">
+            <div class="cert-badge">SQL</div>
+            <h3 class="cert-name">IDC — 21 Days SQL Challenge</h3>
+            <p class="cert-issuer">IDC | 2025</p>
+            <p class="cert-meta">
+              Completed a structured 21-day SQL challenge focused on hands-on
+              practice with joins, CTEs, window functions and analytical
+              queries.
+            </p>
+            <div class="cert-image">
+              <img
+                src="images/idc-sql-certificate.png"
+                alt="IDC 21 Days SQL Challenge certificate"
+              />
+            </div>
+          </article>
 
-    <!-- Excel Automation -->
-    <article class="cert-card">
-      <div class="cert-badge">Automation</div>
-      <h3 class="cert-name">Excel Automation using ChatGPT</h3>
-      <p class="cert-issuer">Simplilearn &amp; Microsoft</p>
-      <p class="cert-meta">
-        Focused on automating Excel workflows and reports using AI, prompts, and integrations to speed up data analysis tasks.
-      </p>
-      <div class="cert-image">
-        <img src="images/cert-excel-automation.png" alt="Excel Automation using ChatGPT certificate" />
-      </div>
-    </article>
-
-    <!-- Business Analytics with Excel -->
-    <article class="cert-card">
-      <div class="cert-badge">Excel</div>
-      <h3 class="cert-name">Business Analytics with Excel</h3>
-      <p class="cert-issuer">Microsoft &amp; Simplilearn</p>
-      <p class="cert-meta">
-        Covered analytical principles using Microsoft Excel including data cleaning, pivot tables, KPI tracking, and scenario analysis.
-      </p>
-      <div class="cert-image">
-        <img src="images/cert-excel.png" alt="Business Analytics with Excel certificate" />
-      </div>
-    </article>
-
-    <!-- IDC 21 days SQL challenge -->
-    <article class="cert-card">
-      <div class="cert-badge">SQL</div>
-      <h3 class="cert-name">IDC — 21 Days SQL Challenge</h3>
-      <p class="cert-issuer">IDC | 2025</p>
-      <p class="cert-meta">
-        Completed a structured 21-day SQL challenge focused on hands-on practice with joins, CTEs, window functions and analytical queries.
-      </p>
-      <div class="cert-image">
-        <img src="images/idc-sql-certificate.png" alt="IDC 21 Days SQL Challenge certificate" />
-      </div>
-    </article>
-
-    <!-- ADCA (portrait image) - use tall-cert class -->
-  </div>
-</section>
-
+          <!-- ADCA (portrait image) - use tall-cert class -->
+        </div>
+      </section>
 
       <!-- Resume -->
       <section id="resume" class="reveal">
