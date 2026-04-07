@@ -8,7 +8,7 @@ The goal of this portfolio is to demonstrate how raw data can be transformed int
 ---   
 
 # 👨‍💻 About Me
-
+  
 I am a **Data Analyst passionate about transforming data into insights** that drive business strategy and operational efficiency.
 
 My expertise includes:
