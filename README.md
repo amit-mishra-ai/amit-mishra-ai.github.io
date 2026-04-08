@@ -5,7 +5,7 @@ This repository showcases my projects in **SQL, Python, Power BI, Data Analytics
 
 The goal of this portfolio is to demonstrate how raw data can be transformed into **actionable insights that support business decision-making**.
 
----   
+---      
 
 # 👨‍💻 About Me
   
