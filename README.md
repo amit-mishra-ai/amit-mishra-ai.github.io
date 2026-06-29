@@ -203,7 +203,7 @@ Looker Studio, PostgreSQL, Supabase
 Explore all dashboards and projects here:
 
 👉 **Portfolio:**  
-https://your-portfolio-link
+https://amit-mishra-ai.github.io/
 
 ---
 
